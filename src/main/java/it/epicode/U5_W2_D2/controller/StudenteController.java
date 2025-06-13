@@ -38,7 +38,7 @@ public class StudenteController {
 
     @DeleteMapping("/studenti/{matricola}")
     @ResponseStatus(HttpStatus.NO_CONTENT)
-    public void deleteStudente(int matricola) throws StudenteNotFoundException {
+    public void deleteStudente(@PathVariable int matricola) throws StudenteNotFoundException {
         studenteService.deleteStudente(matricola);
     }
 }
